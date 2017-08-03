@@ -22,3 +22,8 @@ mv network/ src/
 rm -rf doxygen
 rm -rf cli
 rm -rf tests
+#Move readme to extras
+mkdir extras
+mv *.md extras/
+mv LICENSE extras/
+mv NOTICE extras/
