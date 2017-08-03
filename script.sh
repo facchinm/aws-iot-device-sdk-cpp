@@ -3,11 +3,11 @@ rsync -av include/ src/
 #Rename samples as examples
 mv samples examples
 #Create mega header file
-search_dir=src
-for entry in "$search_dir"/*; do
+search_dir=src/
+for entry in "$search_dir"*; do
   if [ ${entry: -4} == ".hpp" ]
   then
-      echo "#include \"$entry\"" >> src/aws-iot-device-sdk.h
+      echo "#include \"${entry#$search_dir}\"" >> src/aws-iot-device-sdk.h
   fi
 done
 #Remove include folder
