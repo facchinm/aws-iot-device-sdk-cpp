@@ -8,3 +8,6 @@ for entry in "$search_dir"/*; do
   fi
 done
 rm -rf include/
+mkdir src/corei7
+:> src/corei7/empty
+
